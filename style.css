@@ -1,0 +1,161 @@
+/* ベース色設定（くすみブルー×ナチュラル） */
+:root {
+    --main-bg: #f6f8fa;
+    --accent-color: #8da9c4;  /* くすみブルー */
+    --text-color: #333;
+    --priority-high: #e76f51;
+    --priority-medium: #f4a261;
+    --priority-low: #2a9d8f;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: var(--main-bg);
+    color: var(--text-color);
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  h1 {
+    text-align: center;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  select {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    flex: 1 1 100%;
+  }
+  
+  button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #6b8ba4;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: #f9f9f9;
+    border-left: 6px solid var(--accent-color);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  li.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+  
+  li .meta {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  li .actions {
+    margin-top: 0.5rem;
+  }
+  
+  button.delete {
+    background-color: transparent;
+    color: #999;
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  button.delete:hover {
+    color: #e76f51;
+  }
+  
+  /* 優先度カラー */
+  .priority-高 {
+    border-left-color: var(--priority-high);
+  }
+  .priority-中 {
+    border-left-color: var(--priority-medium);
+  }
+  .priority-低 {
+    border-left-color: var(--priority-low);
+  }
+  li {
+    border: 2px solid #a0c4d6;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(160, 196, 214, 0.2);
+  }
+  
+  .sort-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .sort-buttons button {
+    padding: 6px 12px;
+    border: 1px solid #a0c4d6;
+    background-color: #f0f8fa;
+    color: #333;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .sort-buttons button:hover {
+    background-color: #d2eaf4;
+  }
+  
+  
+  /* スマホ対応 */
+  @media (max-width: 480px) {
+    form {
+      flex-direction: column;
+    }
+    li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  

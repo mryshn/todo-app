@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>やることリスト</h1>
+    <form id="todo-form">
+      <input type="text" id="todo-input" placeholder="やることを入力..." required />
+      <input type="date" id="todo-date" />
+      <select id="todo-priority">
+        <option value="高">高</option>
+        <option value="中">中</option>
+        <option value="低">低</option>
+      </select>
+      <button type="submit">追加</button>
+    </form>
+    <div class="sort-buttons">
+        <button type="button" onclick="setSortMode('priority-date')">優先度順</button>
+        <button type="button" onclick="setSortMode('date-priority')">日付順</button>
+        <button type="button" onclick="setSortMode('reverse')">逆順</button>
+      </div>
+      
+    <ul id="todo-list"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
